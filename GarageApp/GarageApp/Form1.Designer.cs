@@ -46,6 +46,7 @@
             button3 = new Button();
             panel3 = new Panel();
             panel4 = new Panel();
+            button4 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -64,7 +65,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(106, 22);
+            button2.Location = new Point(106, 7);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 1;
@@ -74,7 +75,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(25, 22);
+            button1.Location = new Point(25, 7);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -238,12 +239,23 @@
             // panel4
             // 
             panel4.BackColor = SystemColors.ActiveCaptionText;
+            panel4.Controls.Add(button4);
             panel4.Controls.Add(button2);
             panel4.Controls.Add(button1);
             panel4.Location = new Point(12, 372);
             panel4.Name = "panel4";
             panel4.Size = new Size(200, 66);
             panel4.TabIndex = 12;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(62, 34);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 2;
+            button4.Text = "Update";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // Form1
             // 
@@ -287,5 +299,6 @@
         private Label label7;
         private Panel panel3;
         private Panel panel4;
+        private Button button4;
     }
 }

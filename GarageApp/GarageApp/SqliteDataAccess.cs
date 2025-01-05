@@ -34,6 +34,13 @@ namespace GarageApp
                 cnn.Execute("DELETE FROM Vehicule WHERE Registration = @Registration", vehicule);
             }
         }
+        public static void ModifieVehicule(Vehicule vehicule)
+        {
+            using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+            {
+                cnn.Execute("UPDATE Vehicule SET Year = @Year, Color = @Color, Brand = @Brand, Type = @Type WHERE Registration = @Registration", vehicule);
+            }
+        }
 
         private static string LoadConnectionString(string id = "Default") 
         { 

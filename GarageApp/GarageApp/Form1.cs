@@ -79,7 +79,7 @@ namespace GarageApp
             {
                 MessageBox.Show("Please select an item to view details.");
             }
-            
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -122,6 +122,20 @@ namespace GarageApp
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                Form4 form4 = new Form4(vehicules[listBox1.SelectedIndex]);
+                form4.VehiculeAdded += form2_VehiculeAdded;
+                form4.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select an item Update.");
+            }
         }
     }
 }
